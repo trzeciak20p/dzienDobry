@@ -1,6 +1,6 @@
 
 create table nauczyciele(
-    nauczyciel_id int primary key not null auto_increment,
+    nauczyciel_id smallint primary key not null auto_increment,
     nazwisko varchar(50)  not null,
     imie varchar(30)  not null,
     dobry int, 
@@ -8,12 +8,12 @@ create table nauczyciele(
 ); 
 
 create table dni(
-    dzien_id int primary key not null auto_increment
+    dzien_id smallint primary key not null auto_increment
     dzien date not null,
 );
 
 create table glosy(
-    dzien_id int not null,
+    dzien_id smallint not null,
     nauczyciel_id int not null,
     uzytkownik_id int not null,
     glos boolean,
@@ -23,8 +23,7 @@ create table glosy(
 );
 
 create table uzytkownicy(
-    uzytkownik_id int primary key not null auto_increment,
+    uzytkownik_id smallint primary key not null auto_increment,
     nazwa varchar(40) not null,
     haslo password not null,  
 );
-
