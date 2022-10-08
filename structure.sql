@@ -7,12 +7,17 @@ create table nauczyciele(
     nie_dobry int
 ); 
 
-create table glosy(
+create table dni(
+    dzien_id int primary key not null auto_increment
     dzien date not null,
+);
+
+create table glosy(
+    dzien_id int not null,
     nauczyciel_id int not null,
     uzytkownik_id int not null,
     glos boolean,
-    constraint c_glos_dzien foreign key (dzien) references dni(dzien),
+    constraint c_glos_dzien foreign key (dzien_id) references dni(dzien_id),
     constraint c_glos_uzytkownik foreign key (urzytkownik_id) references uzytkownicy(urzytkownik_id),
     constraint c_glos_nauczyciel foreign key (nauczyciel_id) references nauczyciele(nauczyciel_id)
 );
