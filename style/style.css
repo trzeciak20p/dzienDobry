@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+}
+header{
+    background-color: yellow;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    
+}
+h1{
+    text-align: center;
+    flex-grow: 1;
+}
+input[type="button"]{
+    margin-right: 10px;
+}
+.staty div{
+    margin: 5px;
+}
+table{
+    width: fit-content;
+}
+table,tr,td,th{
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+tr,td,th{
+    padding: 5px;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}

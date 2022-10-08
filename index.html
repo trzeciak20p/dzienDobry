@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dzień dobry</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <h1>Dzień dobry</h1> 
+        <div>
+            <input type="button" value="Opcje">
+        </div>
+    </header>
+
+        <section class="staty">
+            <div>Ratio dziś: <span>1:0</span></div>
+            <div>Ratio ogólnie: <span>1:2</span></div>
+        </section>
+        <section class="tabelka">
+            <table>
+                <tr>
+                    <th>Imię i nazwisko</th>
+                    <th>Dobry</th>
+                    <th>Nie dobry</th>
+                    <th>Ok</th>
+                    <th>Ratio</th>
+                </tr>
+                <tr>
+                    <form action="">
+                        <td>Grażyna Witkowska</td>
+                        <td>
+                            <label for="grazyna-tak">
+                                Dobry
+                                <input type="radio" name="dobry" class="tak" id="grazyna-tak">
+                            </label>
+                        </td>
+                        <td>
+                            <label for="grazyna-nie">
+                                Nie Dobry
+                                <input type="radio" name="dobry" class="nie" id="grazyna-nie">
+                            </label>
+                        </td>
+                        <td>
+                            <input type="submit" value="ok">
+                        </td>
+                        <td>
+                            <span>2:1</span>
+                        </td>
+                    </form>
+                </tr>
+            </table>
+        </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
