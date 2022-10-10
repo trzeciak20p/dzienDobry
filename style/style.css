@@ -1,8 +1,13 @@
+/* kolorki #51E2F5 #9DF9EF #EDF7F6 #FFA8B6 #A28089 */
+*{
+    font-family: 'Trebuchet MS', sans-serif;
+}
 body{
     margin: 0;
+    background-color: #EDF7F6;
 }
 header{
-    background-color: yellow;
+    background-color: #FFA8B6;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -12,21 +17,46 @@ h1{
     text-align: center;
     flex-grow: 1;
 }
-input[type="button"]{
+header input[type="button"]{
     margin-right: 10px;
 }
 .staty div{
     margin: 5px;
 }
+table,td,th{
+    border: 0px solid #111;
+    border-collapse: collapse;
+}
 table{
     width: fit-content;
 }
-table,tr,td,th{
-    border: 1px solid #000;
-    border-collapse: collapse;
-}
+
 tr,td,th{
     padding: 5px;
+}
+table tr:nth-child(2n+1){
+    background-color: #51E2F5;
+}
+table tr:nth-child(2n){
+    background-color: #9DF9EF;
+}
+table tr:nth-child(2n+1):hover{
+    background-color: #4ed2e3;
+}
+table tr:nth-child(2n):hover{
+    background-color: #97ece2;
+}
+
+table input[type="button"]{
+    height: 20px;
+    width: 30px;
+    border-width: 0;
+    background: rgb(172,143,151);
+    background: linear-gradient(141deg, rgba(172,143,151,1) 0%, rgba(162,128,137,1) 55%, rgba(173,158,162,1) 100%);
+    color: #fff;
+}
+table input[type="button"]:hover{
+    cursor: pointer;
 }
 section{
     display: flex;
