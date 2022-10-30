@@ -1,0 +1,19 @@
+{
+  "name": "dziendobry",
+  "version": "1.0.0",
+  "description": "A very funny app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trzeciak20p/dzienDobry.git"
+  },
+  "author": "2 very funny guys",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trzeciak20p/dzienDobry/issues"
+  },
+  "homepage": "https://github.com/trzeciak20p/dzienDobry#readme"
+}
