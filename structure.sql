@@ -10,7 +10,7 @@ create table nauczyciele(
 create table uzytkownicy(
     uzytkownik_id smallint primary key not null auto_increment,
     nazwa varchar(40) not null,
-    haslo varchar(40) not null
+    haslo BINARY(64) not null
 );
 
 create table glosy(
