@@ -30,3 +30,19 @@ pool.query(
         console.log(res)
     }
 )
+
+
+app.post("/api/login", (req, res) => {
+    //to jest to co dosta jesz od użytkownika
+    console.log(req.body)
+    pool.query(
+    'SELECT * FROM uzytkownicy',
+    (err, result) =>{
+        console.log(res)
+        //tym syfem wysyłasz odpowiedź do użytkownika
+        return res.json({
+                message : "Logowanie udane czy coś"
+               })
+    }
+)
+})
