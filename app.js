@@ -46,3 +46,23 @@ app.post("/api/login", (req, res) => {
     }
 )
 })
+
+//a tak wysyłasz zapytanie na serwer po stronie użytkownika (nie chce mi się szukać pliku po stronie klienta)
+async function login(){
+    
+    const data = { 
+        login : "admin",
+        password : "12345"
+    }
+    const options = {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }
+    const res = await fetch("api/login", options)
+    const results = await res.json()
+    console.log(results)
+    
+}
