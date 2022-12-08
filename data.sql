@@ -3,4 +3,4 @@ INSERT INTO nauczyciele(imie,nazwisko,dobry,nie_dobry) VALUES("Daniel","Kuśka",
 INSERT INTO nauczyciele(imie,nazwisko,dobry,nie_dobry) VALUES("Katarzyna","Pietrzyk-Piotrowska",0,0);
 
 
-INSERT INTO uzytkownicy(nazwa,haslo) VALUEs("admin",SHA2('admmin',256));
+INSERT INTO uzytkownicy(nazwa,haslo) VALUES("admin",SHA2('admmin',256));

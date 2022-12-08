@@ -22,47 +22,17 @@ const pool = mysql.createPool({
     queueLimit: 0
 })
 
-
-//test query
-pool.query(
-    'SELECT * FROM uzytkownicy',
-    (err, res) =>{
-        console.log(res)
-    }
-)
-
-
+// const logreg = require('./modules/logreg.js')
+// logreg.login(app,pool)
 app.post("/api/login", (req, res) => {
-    //to jest to co dosta jesz od użytkownika
-    console.log(req.body)
+    console.log(req.body.login)
     pool.query(
     'SELECT * FROM uzytkownicy',
     (err, result) =>{
         console.log(res)
-        //tym syfem wysyłasz odpowiedź do użytkownika
         return res.json({
                 message : "Logowanie udane czy coś"
                })
     }
 )
 })
-
-//a tak wysyłasz zapytanie na serwer po stronie użytkownika (nie chce mi się szukać pliku po stronie klienta)
-async function login(){
-    
-    const data = { 
-        login : "admin",
-        password : "12345"
-    }
-    const options = {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-            "Content-Type": "application/json",
-        },
-    }
-    const res = await fetch("api/login", options)
-    const results = await res.json()
-    console.log(results)
-    
-}
