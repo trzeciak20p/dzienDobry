@@ -11,7 +11,6 @@ header{
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    
 }
 h1{
     text-align: center;
@@ -45,6 +44,38 @@ table tr:nth-child(2n+1):hover{
 }
 table tr:nth-child(2n):hover{
     background-color: #97ece2;
+}
+
+table label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+table input[type="radio"]{
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
+table .checkmark{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    content: "";
+    background-position: center;
+    background-repeat: no-repeat;
+}
+table input[type="radio"][class="tak"] ~ .checkmark{
+    background-image: url("../graphic/plus_square_notfilled.svg");
+}
+table input[type="radio"][class="tak"]:checked ~ .checkmark{
+    background-image: url("../graphic/plus_square_filled.svg");
+}
+table input[type="radio"][class="nie"] ~ .checkmark{
+    background-image: url("../graphic/minus_square_notfilled.svg");
+}
+table input[type="radio"][class="nie"]:checked ~ .checkmark{
+    background-image: url("../graphic/minus_square_filled.svg");
 }
 
 table input[type="button"]{
