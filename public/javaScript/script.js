@@ -37,25 +37,30 @@ async function getData(){
         //tu radio na tak
         td = document.createElement("td")
         let label = document.createElement("label")
-        text = document.createTextNode("Dobry")
-        label.append(text)
         let radio = document.createElement("input")
         radio.type="radio"
         radio.name= "dobry"
         radio.classList.add("tak")
         label.append(radio)
+        let checkmark = document.createElement("div")
+        checkmark.classList.add("checkmark")
+        label.append(checkmark)
         td.append(label)
         tr.append(td)
         //tu radio na nie
         td = document.createElement("td")
         label = document.createElement("label")
-        text = document.createTextNode("Nie dobry")
-        label.append(text)
         radio = document.createElement("input")
         radio.type="radio"
         radio.name= "dobry"
         radio.classList.add("nie")
         label.append(radio)
+        console.log(checkmark)
+        checkmark = document.createElement("div")
+        checkmark.classList.add("checkmark")
+        label.append(checkmark)
+        console.log(checkmark)
+        
         td.append(label)
         tr.append(td)
         //tu wysyłanie
