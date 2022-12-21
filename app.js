@@ -19,20 +19,16 @@ const pool = mysql.createPool({
     database: 'dziendobry',
     waitForConnections: true,
     connectionLimit: 10,
-    queueLimit: 0
+    queueLimit: 0,
+    multipleStatements: false
 })
 
-// const logreg = require('./modules/logreg.js')
-// logreg.login(app,pool)
-app.post("/api/login", (req, res) => {
-    console.log(req.body.login)
-    pool.query(
-    'SELECT * FROM uzytkownicy',
-    (err, result) =>{
-        console.log(res)
-        return res.json({
-                message : "Logowanie udane czy coś"
-               })
-    }
-)
-})
+//login & registration
+const logreg = require('./modules/logreg.js')
+logreg.login(app,pool)
+
+
+// main page functionalities
+const mainData = require('./modules/mainData.js')
+mainData.sendData(app,pool)
+

@@ -1,5 +1,5 @@
 //logowanie
-document.querySelector("#log-submit").addEventListener("click", async ()=>{
+async function login(){
     const data = { 
         login : document.querySelector("#log-log").value,
         password : document.querySelector("#log-pas").value
@@ -15,7 +15,7 @@ document.querySelector("#log-submit").addEventListener("click", async ()=>{
     const res = await fetch("api/login", options)
     const results = await res.json()
     console.log(results.message)
-}) 
-    
+}
+document.querySelector("#log-submit").addEventListener("click", login) 
     
     

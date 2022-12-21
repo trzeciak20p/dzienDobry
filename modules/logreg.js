@@ -1,14 +1,18 @@
 async function login(app, pool)
 {
     app.post("/api/login", (req, res) => {
-        console.log(req.body.login)
+        console.log(req.body)
         pool.query(
         'SELECT * FROM uzytkownicy',
         (err, result) =>{
-            console.log(res)
-            return res.json({
-                    message : "Logowanie udane czy coś"
+            if(err){
+                console.error(err)
+                return res.json({
+                    message : "Logowanie nieudane"
                    })
+            }
+            console.log(result)
+            
         }
     )
     })

@@ -1,20 +1,24 @@
 //json do testów
 let example = [{
+    "id": 0,
     "nazwisko": "nazwisk8o",
     "imie": "imie",
     "dobry": 12,
     "nie_dobry": 1
 }, {
+    "id": 1,
     "nazwisko": "n6azwisko",
     "imie": "imi3e",
     "dobry": 0,
     "nie_dobry": 5
 }, {
+    "id": 2,
     "nazwisko": "nazw14isko",
     "imie": "im2ie",
     "dobry": 0,
     "nie_dobry": 6
 }, {
+    "id": 3,
     "nazwisko": "nazwis23ko",
     "imie": "im1ie",
     "dobry": 12,
@@ -25,9 +29,20 @@ let example = [{
 // tu bedzie pobieranie danych i wysiwetlanie na razie jakbysmy w nodzie chcieli robić bo wciąż nie wiem
 async function getData(){
     console.log(example)
+    const data = {}
+    const options = {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }
+    const res = await fetch("api/sendData", options)
+    const results = await res.json()
+    console.log(results)
     // tu generuje tabelke
     let table = document.querySelector("#nauczyciele").querySelector("tbody")
-    example.forEach(element => {
+    results.nauczyciele.forEach(element => {
         const tr = document.createElement("tr")
         //tu imie i nazwisko
         let td = document.createElement("td")
