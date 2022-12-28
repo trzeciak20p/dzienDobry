@@ -44,6 +44,9 @@ async function getData(){
     let table = document.querySelector("#nauczyciele").querySelector("tbody")
     results.nauczyciele.forEach(element => {
         const tr = document.createElement("tr")
+        let att = document.createAttribute("nauczycielID")
+        att.value = element.id
+        tr.setAttributeNode(att)
         //tu imie i nazwisko
         let td = document.createElement("td")
         let text = document.createTextNode(element.imie + " "+ element.nazwisko)
@@ -56,6 +59,9 @@ async function getData(){
         radio.type="radio"
         radio.name= "dobry"
         radio.classList.add("tak")
+        att = document.createAttribute("nauczycielID")
+        att.value = element.id
+        radio.setAttributeNode(att)
         label.append(radio)
         let checkmark = document.createElement("div")
         checkmark.classList.add("checkmark")
@@ -69,6 +75,9 @@ async function getData(){
         radio.type="radio"
         radio.name= "dobry"
         radio.classList.add("nie")
+        att = document.createAttribute("nauczycielID")
+        att.value = element.id
+        radio.setAttributeNode(att)
         label.append(radio)
         console.log(checkmark)
         checkmark = document.createElement("div")
