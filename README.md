@@ -8,7 +8,7 @@ Chcesz się przyczynić? Poproś o przyznanie konta i będziesz mógł się doł
 - [x] wysyłanie danych do klienta
 - [ ] walidacja przy wysyłaniu danych o nauczycielach do klienta (trzeba o dane logowania poprosić by ktoś nie podglądał niechciany)
 - [ ] walidacja przy logowaniu
-- [ ] dokończyć logowania tak wgl
+- [x] dokończyć logowania tak wgl
 - [ ] głosowanie
 - [ ] walidacja głosowanie
 - [ ] czy głos się powtarza nie można 2 razy dziennie
